@@ -1,0 +1,122 @@
+Hej Joakim!
+
+Laddade ner din data från apiet i förra kursen och använde det så det skulle passa den gamla sidan. Hoppas det är ok.
+Men! Det går även att skapa nya produkter och det går att radera och uppdatera, så hela crud är med. 
+Det går att skapa och logga in användare, och du får en token som du kan använda en hel timme.
+Här under är allt listat som går att göra.
+
+Du får skapa en refresh och secret och lägga in i .env filen. 
+Starta med: npm run devStart
+
+-------------------------------
+
+PRODUKTER 
+
+-------------------------------
+
+
+
+HÄMTA ALLA PRODUKTER 
+
+http://localhost:8000/api/products
+
+HÄMTA EN PRODUKT
+
+http://localhost:8000/api/products/:id
+
+LÄGGA TILL PRODUKT 
+
+http://localhost:8000/api/products/create
+
+  {
+    "name": "",
+    "price": "",
+    "description": "",
+    "category": "",
+    "images": ""
+}
+
+UPPDATERA EN PRODUKT
+
+http://localhost:8000/api/products/put/:id
+
+RADERA EN PRODUKT 
+
+http://localhost:8000/api/products/delete/:id
+
+
+
+-------------------------------
+
+MEDDELANDEN 
+
+-------------------------------
+
+
+
+SKICKA ETT MEDDELANDE 
+
+http://localhost:8000/api/messages
+
+
+
+-------------------------------
+
+ANVÄNDARE/USERS
+
+-------------------------------
+
+
+
+REGISTRERA NY ANVÄNDARE 
+
+http://localhost:8000/api/auth/register
+
+{
+    "email": "email@email.eu",
+    "password": "password"
+}
+
+LOGGA IN EXISTERANDE ANVÄNDARE 
+
+http://localhost:8000/api/auth/login
+
+Använd token för att lägga order härnäst. ---->
+
+
+
+-------------------------------
+
+ORDRAR 
+
+-------------------------------
+
+
+
+SKAPA ORDER 
+
+http://localhost:8000/api/orders
+
+{
+    "products": [
+        {
+            "productId": "",
+            "quantity": ""
+        }
+    ]
+}
+
+
+HÄMTA ORDRAR 
+
+http://localhost:8000/api/orders
+
+Hämtar alla kopplade till webtoken.
+
+
+
+HÄMTA ENSKILD ORDER
+
+http://localhost:8000/api/orders/:id
+
+Hämtar enskild kopplad till webtoken.
